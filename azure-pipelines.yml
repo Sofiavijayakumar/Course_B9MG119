@@ -7,10 +7,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: UseDotNet@2
+- task: NodeTaskRunnerInstaller@0
   inputs:
-    packageType: 'sdk'
-    version: '6.0.x'
+    nodeVersion: '10'
 
 - task: Docker@2
   displayName: 'Build and Push Docker image'
@@ -18,7 +17,7 @@ steps:
     containerRegistry: 'B9MG119'  
     repository: 'B9MG119/todolist'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/app/Dockerfile'
     buildContext: '$(Build.SourcesDirectory)'
     tags: |
       $(Build.BuildId)
