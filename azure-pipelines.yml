@@ -14,7 +14,7 @@ steps:
 - task: Docker@2
   displayName: 'Build and Push Docker image'
   inputs:
-    containerRegistry: 'B9MG119'  
+    containerRegistry: 'Course_B9MG119'  
     repository: 'B9MG119/todolist'
     command: 'buildAndPush'
     Dockerfile: '**/app/Dockerfile'
