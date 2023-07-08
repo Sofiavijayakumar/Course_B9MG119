@@ -1,8 +1,8 @@
 FROM node:18-alpine
 WORKDIR /app
 # Install app dependencies
-COPY . .
+COPY ./app .
 RUN yarn install --production
-RUN npm install ./app
-CMD ["node", "app/src/index.js"]
+RUN npm install 
+CMD ["node", "src/index.js"]
 EXPOSE 3000
