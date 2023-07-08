@@ -1,5 +1,5 @@
 FROM node:18-alpine
-WORKDIR /app/app
+WORKDIR /app
 # Install app dependencies
 COPY . .
 RUN yarn install --production
