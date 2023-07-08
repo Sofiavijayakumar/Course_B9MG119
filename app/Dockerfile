@@ -4,5 +4,5 @@ WORKDIR /app
 COPY . .
 RUN yarn install --production
 RUN npm install ./app
-CMD ["node", "src/index.js"]
+CMD ["node", "app/src/index.js"]
 EXPOSE 3000
