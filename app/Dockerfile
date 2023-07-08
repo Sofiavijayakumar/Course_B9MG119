@@ -3,5 +3,5 @@ WORKDIR /app
 # Install app dependencies
 COPY . .
 RUN yarn install --production
-CMD ["node", "src/index.js"]
+CMD ["node", "app/src/index.js"]
 EXPOSE 3000
